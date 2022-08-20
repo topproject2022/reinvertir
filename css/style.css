@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #e6f4fd;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    border: 1px #eaeaea solid;
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 10px;
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+input,
+select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.button19 {
+    font-weight: bold;
+    user-select: none;
+    padding: .7em 1.5em;
+    border: 1px solid rgb(80, 32, 0);
+    border-radius: 5px;
+    outline: none;
+    background: #4FD1C5 linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    box-shadow:
+        0 3px 5px #5da7fc,
+        0 3px 15px rgba(0, 0, 0, .4),
+        inset 0 1px rgba(255, 255, 255, .3),
+        inset 0 0 3px rgba(255, 255, 255, .5);
+    transition: .2s;
+}
+
+.ui-form input[type="submit"] {
+    width: 100%;
+    padding: 0;
+    line-height: 42px;
+    background: #4a90e2;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.button19:hover {
+    background: #4FD1C5 linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 40%);
+}
+
+.button19:active {
+    background: #4FD1C5 linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 40%);
+    box-shadow:
+        0 2px #4FD1C5,
+        0 1px 6px rgba(0, 0, 0, .4),
+        inset 0 1px rgba(255, 255, 255, .3),
+        inset 0 0 3px rgba(255, 255, 255, .5);
+    -webkit-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+.num {
+    border-bottom: 2px solid #4a90e2;
+}
+
+.ui-form {
+    max-width: 350px;
+    padding: 30px 30px 30px;
+    margin: 50px auto 30px;
+    background: white;
+    border-radius: 10px;
+}
+
+.ui-form h3 {
+    position: relative;
+    z-index: 5;
+    margin: 0 0 20px;
+    text-align: center;
+    color: #4a90e2;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.form-row {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-row input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    background: none;
+    border-width: 0;
+    border-bottom: 2px solid #4a90e2;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.form-row input:focus {
+    outline: 0;
+    border-color: #F77A52;
+}
+
+.ui-form p {
+    margin: 0;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+
+    input,
+    select {
+        font-size: 25px;
+    }
+}
